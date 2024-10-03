@@ -20,6 +20,7 @@ const rename = async () => {
     } catch (err) {
         console.error(err.message);
     }
+
 };
 
 await rename();

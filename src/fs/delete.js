@@ -18,6 +18,7 @@ const remove = async () => {
     } catch (e) {
         console.error(e);
     }
+
 };
 
 await remove();
