@@ -15,7 +15,7 @@ const create = async () => {
     if (await exists(filePath)) throw new Error(`FS operation failed`);
 
     try {
-        await fs.writeFile(filePath, content);
+        await fs.writeFile(filePath, content, { encoding: 'utf8' });
     } catch (e) {
         console.error(e);
     }
