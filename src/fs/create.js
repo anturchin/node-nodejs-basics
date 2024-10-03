@@ -12,7 +12,11 @@ const content = 'I am fresh and young';
 
 const create = async () => {
     if (await exists(filePath)) throw new Error(`FS operation failed`);
-    await fs.writeFile(filePath, content);
+    try {
+        await fs.writeFile(filePath, content);
+    } catch (e) {
+        console.error(e);
+    }
 };
 
 await create();
